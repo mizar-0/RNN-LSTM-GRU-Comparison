@@ -1,0 +1,30 @@
+{
+  "model": "GRU",
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "seed": 42,
+  "context_window": 64,
+  "vocabulary_size": 10000,
+  "parameter_count": 4146448,
+  "epochs_completed": 40,
+  "training_seconds": 2820.7495641999994,
+  "seconds_per_epoch": 70.51873910499998,
+  "dataset": {
+    "all_records": 98454,
+    "filtered_limericks": 65886,
+    "selected_poems": 65886,
+    "authors_in_selected_set": 1296
+  },
+  "examples": {
+    "train": 2229796,
+    "validation": 279120,
+    "test": 278760
+  },
+  "test": {
+    "loss": 3.8134168331755474,
+    "perplexity": 45.30497424418384,
+    "top1_accuracy": 0.34841799397331036,
+    "top5_accuracy": 0.5479408810446262
+  }
+}

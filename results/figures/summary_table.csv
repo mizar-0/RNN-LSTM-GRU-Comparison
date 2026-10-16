@@ -1,0 +1,5 @@
+model,epochs_completed,best_validation_epoch,best_validation_perplexity,test_loss,test_perplexity,test_top1_accuracy_pct,test_top5_accuracy_pct,parameter_count,seconds_per_epoch,training_minutes
+Simple RNN,22,17,62.5416,4.139871,62.7947,31.9429,50.5575,3948816,59.5497,21.8349
+BiRNN,33,28,62.4116,4.140095,62.8088,31.9978,50.6098,6607632,93.9495,51.6722
+LSTM,26,21,49.6397,3.912586,50.0282,34.1423,53.5482,4245264,68.8957,29.8548
+GRU,40,40,45.0265,3.813417,45.3050,34.8418,54.7941,4146448,70.5187,47.0125

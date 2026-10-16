@@ -1,0 +1,27 @@
+{
+  "temperatures": [
+    0.3,
+    0.5,
+    0.8,
+    1.0,
+    1.3,
+    1.5
+  ],
+  "prompts": [
+    "there once was a",
+    "a young man from",
+    "an old woman who",
+    "a clever young poet",
+    "in a small town"
+  ],
+  "samples_per_model_temperature": 300,
+  "max_new_tokens": 80,
+  "generation_seed": 1234,
+  "context_window": 64,
+  "models": {
+    "rnn": "final_context64_rnn",
+    "birnn": "final_context64_birnn",
+    "lstm": "final_context64_lstm",
+    "gru": "final_context64_gru"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "model": "SimpleRNN",
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "seed": 42,
+  "context_window": 64,
+  "vocabulary_size": 10000,
+  "parameter_count": 3948816,
+  "epochs_completed": 22,
+  "training_seconds": 1310.0923288999984,
+  "seconds_per_epoch": 59.54965131363629,
+  "dataset": {
+    "all_records": 98454,
+    "filtered_limericks": 65886,
+    "selected_poems": 65886,
+    "authors_in_selected_set": 1296
+  },
+  "examples": {
+    "train": 2229796,
+    "validation": 279120,
+    "test": 278760
+  },
+  "test": {
+    "loss": 4.1398706023158365,
+    "perplexity": 62.79469543530224,
+    "top1_accuracy": 0.3194288994116803,
+    "top5_accuracy": 0.505574687903573
+  }
+}

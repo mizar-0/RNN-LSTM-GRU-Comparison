@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/*.json
+results/*/checkpoints/
+results/sweep/blinded_manual_scoring_key.csv
+results/sweep/blinded_manual_scoring.xlsx.inspect.ndjson
+results/bidirectional_rnn/
+results/full_simple_rnn/
+results/gru/
+results/lstm/
+results/simple_rnn/
+tmp/
