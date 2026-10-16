@@ -1,4 +1,4 @@
-"""Create the blinded manual-score temperature plot."""
+"""Create the blinded Claude LLM-judge score temperature plot."""
 from __future__ import annotations
 import csv
 from pathlib import Path
@@ -8,12 +8,12 @@ TEMPS=(.3,.5,.8,1.3)
 def p(v,a,b,x0,x1): return x0+(v-a)/(b-a)*(x1-x0)
 def main():
  root=Path('results/sweep'); rows=list(csv.DictReader((root/'manual_score_summary.csv').open())); data={(r['model'],float(r['temperature'])):r for r in rows}; x0,x1,y0,y1=100,700,85,450
- out=["<svg xmlns='http://www.w3.org/2000/svg' width='780' height='540' viewBox='0 0 780 540' role='img'><title>Blinded manual scoring by temperature</title><rect width='100%' height='100%' fill='white'/>","<text x='390' y='32' text-anchor='middle' font-family='Arial' font-size='20' font-weight='bold'>Blinded manual-score results</text>",f"<line x1='{x0}' y1='{y0}' x2='{x0}' y2='{y1}' stroke='#333'/><line x1='{x0}' y1='{y1}' x2='{x1}' y2='{y1}' stroke='#333'/>"]
+ out=["<svg xmlns='http://www.w3.org/2000/svg' width='780' height='540' viewBox='0 0 780 540' role='img'><title>Blinded Claude LLM judge scores by temperature</title><rect width='100%' height='100%' fill='white'/>","<text x='390' y='32' text-anchor='middle' font-family='Arial' font-size='20' font-weight='bold'>Blinded Claude LLM judge scores</text>",f"<line x1='{x0}' y1='{y0}' x2='{x0}' y2='{y1}' stroke='#333'/><line x1='{x0}' y1='{y1}' x2='{x1}' y2='{y1}' stroke='#333'/>"]
  for i in range(6):
   v=i; y=p(v,0,5,y1,y0); out.append(f"<line x1='{x0}' y1='{y:.1f}' x2='{x1}' y2='{y:.1f}' stroke='#ddd'/><text x='{x0-8}' y='{y+4:.1f}' text-anchor='end' font-family='Arial' font-size='10'>{v}</text>")
  for t in TEMPS:
   x=p(t,.3,1.3,x0,x1); out.append(f"<text x='{x:.1f}' y='{y1+18}' text-anchor='middle' font-family='Arial' font-size='10'>{t:.1f}</text>")
- out.append("<text x='400' y='495' text-anchor='middle' font-family='Arial' font-size='11'>Temperature</text><text x='35' y='270' text-anchor='middle' transform='rotate(-90 35 270)' font-family='Arial' font-size='11'>Mean manual score (1-5)</text>")
+ out.append("<text x='400' y='495' text-anchor='middle' font-family='Arial' font-size='11'>Temperature</text><text x='35' y='270' text-anchor='middle' transform='rotate(-90 35 270)' font-family='Arial' font-size='11'>Mean LLM judge score (1-5)</text>")
  for n,(model,label,color) in enumerate(MODELS):
   pts=[]
   for t in TEMPS:

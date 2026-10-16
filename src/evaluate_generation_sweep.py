@@ -48,19 +48,30 @@ def last_word(line: list[str]) -> str | None:
 
 
 def rhymes(first: str, second: str) -> bool:
-    return first == second or second in pronouncing.rhymes(first)
+    """Return true only for distinct, dictionary-covered rhyming words."""
+    if first == second:
+        return False
+    if not pronouncing.phones_for_word(first) or not pronouncing.phones_for_word(second):
+        return False
+    return second in pronouncing.rhymes(first)
 
 
 def rhyme_metrics(poem_lines: list[list[str]]) -> tuple[float, float]:
     if len(poem_lines) != 5:
-        return float("nan"), 0.0
+        return 0.0, 0.0
     endings = [last_word(line) for line in poem_lines]
-    coverage = sum(word is not None and bool(pronouncing.phones_for_word(word)) for word in endings) / 5
-    if coverage < 1:
-        return float("nan"), coverage
     a, a2, b, b2, a3 = endings
-    score = sum((rhymes(a, a2), rhymes(b, b2), rhymes(a, a3), rhymes(a2, a3))) / 4
-    return float(score), coverage
+    pairs = ((a, a2), (b, b2), (a, a3), (a2, a3))
+    eligible = [
+        first is not None
+        and second is not None
+        and first != second
+        and bool(pronouncing.phones_for_word(first))
+        and bool(pronouncing.phones_for_word(second))
+        for first, second in pairs
+    ]
+    score = sum(rhymes(first, second) for first, second in pairs if first and second) / 4
+    return float(score), sum(eligible) / 4
 
 
 def ngrams(tokens: list[str], size: int) -> list[tuple[str, ...]]:
@@ -131,7 +142,7 @@ def main() -> None:
     with (args.output / "per_poem_metrics.jsonl").open("w", encoding="utf-8") as handle:
         for record in scored:
             handle.write(json.dumps(record, ensure_ascii=False) + "\n")
-    (args.output / "evaluation_notes.md").write_text("# Sweep evaluation\n\nRhyme score is the mean of the A-A, B-B, A-final, and second-A-final rhyme checks, evaluated only for exactly five-line poems whose five line-ending words are all covered by CMU Pronouncing Dictionary. Unterminated poems are retained and count as failures for termination and five-line form. Bootstrap intervals are 95% percentile intervals with 2,000 resamples.\n", encoding="utf-8")
+    (args.output / "evaluation_notes.md").write_text("# Sweep evaluation\n\nStrict AABBA rhyme score is the mean of four required pair checks: lines 1-2, 3-4, 1-5, and 2-5. A pair scores one only when both line-ending words are distinct, both are covered by the CMU Pronouncing Dictionary, and CMUdict lists them as rhymes. Identical end words, uncovered pairs, and missing five-line structure score zero. Rhyme coverage is the share of the four required pairs that contain distinct, dictionary-covered end words. Unterminated poems are retained and count as failures for termination and five-line form. Bootstrap intervals are 95% percentile intervals with 2,000 resamples.\n", encoding="utf-8")
     print(f"Scored {len(scored)} generated poems across {len(by_cell)} model-temperature cells.")
 
 

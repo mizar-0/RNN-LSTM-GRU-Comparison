@@ -1,5 +1,5 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='780' height='540' viewBox='0 0 780 540' role='img'><title>Blinded manual scoring by temperature</title><rect width='100%' height='100%' fill='white'/>
-<text x='390' y='32' text-anchor='middle' font-family='Arial' font-size='20' font-weight='bold'>Blinded manual-score results</text>
+<svg xmlns='http://www.w3.org/2000/svg' width='780' height='540' viewBox='0 0 780 540' role='img'><title>Blinded Claude LLM judge scores by temperature</title><rect width='100%' height='100%' fill='white'/>
+<text x='390' y='32' text-anchor='middle' font-family='Arial' font-size='20' font-weight='bold'>Blinded Claude LLM judge scores</text>
 <line x1='100' y1='85' x2='100' y2='450' stroke='#333'/><line x1='100' y1='450' x2='700' y2='450' stroke='#333'/>
 <line x1='100' y1='450.0' x2='700' y2='450.0' stroke='#ddd'/><text x='92' y='454.0' text-anchor='end' font-family='Arial' font-size='10'>0</text>
 <line x1='100' y1='377.0' x2='700' y2='377.0' stroke='#ddd'/><text x='92' y='381.0' text-anchor='end' font-family='Arial' font-size='10'>1</text>
@@ -11,7 +11,7 @@
 <text x='220.0' y='468' text-anchor='middle' font-family='Arial' font-size='10'>0.5</text>
 <text x='400.0' y='468' text-anchor='middle' font-family='Arial' font-size='10'>0.8</text>
 <text x='700.0' y='468' text-anchor='middle' font-family='Arial' font-size='10'>1.3</text>
-<text x='400' y='495' text-anchor='middle' font-family='Arial' font-size='11'>Temperature</text><text x='35' y='270' text-anchor='middle' transform='rotate(-90 35 270)' font-family='Arial' font-size='11'>Mean manual score (1-5)</text>
+<text x='400' y='495' text-anchor='middle' font-family='Arial' font-size='11'>Temperature</text><text x='35' y='270' text-anchor='middle' transform='rotate(-90 35 270)' font-family='Arial' font-size='11'>Mean LLM judge score (1-5)</text>
 <line x1='100.0' y1='296.7' x2='100.0' y2='267.5' stroke='#4C78A8' stroke-width='1.5'/><line x1='95.0' y1='296.7' x2='105.0' y2='296.7' stroke='#4C78A8'/><line x1='95.0' y1='267.5' x2='105.0' y2='267.5' stroke='#4C78A8'/>
 <line x1='220.0' y1='304.0' x2='220.0' y2='304.0' stroke='#4C78A8' stroke-width='1.5'/><line x1='215.0' y1='304.0' x2='225.0' y2='304.0' stroke='#4C78A8'/><line x1='215.0' y1='304.0' x2='225.0' y2='304.0' stroke='#4C78A8'/>
 <line x1='400.0' y1='325.9' x2='400.0' y2='282.1' stroke='#4C78A8' stroke-width='1.5'/><line x1='395.0' y1='325.9' x2='405.0' y2='325.9' stroke='#4C78A8'/><line x1='395.0' y1='282.1' x2='405.0' y2='282.1' stroke='#4C78A8'/>

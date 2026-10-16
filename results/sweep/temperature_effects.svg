@@ -1,159 +1,159 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800' role='img'><title>Temperature effects on form and diversity</title><rect width='100%' height='100%' fill='white'/>
-<text x='600' y='32' text-anchor='middle' font-size='20' font-weight='bold' font-family='Arial, sans-serif'>Temperature effects on generated limericks</text>
-<text x='315.0' y='77' text-anchor='middle' font-size='14' font-weight='bold' font-family='Arial, sans-serif'>Five-line form</text><line x1='90' y1='95' x2='90' y2='315' stroke='#333'/><line x1='90' y1='315' x2='540' y2='315' stroke='#333'/>
-<line x1='90' y1='315.0' x2='540' y2='315.0' stroke='#ddd'/><text x='83' y='319.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.00</text>
-<line x1='90' y1='260.0' x2='540' y2='260.0' stroke='#ddd'/><text x='83' y='264.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.25</text>
-<line x1='90' y1='205.0' x2='540' y2='205.0' stroke='#ddd'/><text x='83' y='209.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.50</text>
-<line x1='90' y1='150.0' x2='540' y2='150.0' stroke='#ddd'/><text x='83' y='154.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.75</text>
-<line x1='90' y1='95.0' x2='540' y2='95.0' stroke='#ddd'/><text x='83' y='99.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>1.00</text>
-<text x='90.0' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.3</text>
-<text x='277.5' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.8</text>
-<text x='465.0' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>1.3</text>
-<text x='315.0' y='349' text-anchor='middle' font-size='10' font-family='Arial, sans-serif'>Temperature</text><text x='49' y='205.0' text-anchor='middle' transform='rotate(-90 49 205.0)' font-size='10' font-family='Arial, sans-serif'>Share of poems</text>
-<polyline points='90.0,95.0 165.0,95.7 277.5,99.4 352.5,102.3 465.0,122.9 540.0,163.9' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
-<circle cx='90.0' cy='95.0' r='3.2' fill='#4C78A8'/>
-<circle cx='165.0' cy='95.7' r='3.2' fill='#4C78A8'/>
-<circle cx='277.5' cy='99.4' r='3.2' fill='#4C78A8'/>
-<circle cx='352.5' cy='102.3' r='3.2' fill='#4C78A8'/>
-<circle cx='465.0' cy='122.9' r='3.2' fill='#4C78A8'/>
-<circle cx='540.0' cy='163.9' r='3.2' fill='#4C78A8'/>
-<polyline points='90.0,122.9 165.0,117.0 277.5,111.1 352.5,113.3 465.0,148.5 540.0,191.1' fill='none' stroke='#F58518' stroke-width='2.4'/>
-<circle cx='90.0' cy='122.9' r='3.2' fill='#F58518'/>
-<circle cx='165.0' cy='117.0' r='3.2' fill='#F58518'/>
-<circle cx='277.5' cy='111.1' r='3.2' fill='#F58518'/>
-<circle cx='352.5' cy='113.3' r='3.2' fill='#F58518'/>
-<circle cx='465.0' cy='148.5' r='3.2' fill='#F58518'/>
-<circle cx='540.0' cy='191.1' r='3.2' fill='#F58518'/>
-<polyline points='90.0,95.0 165.0,95.0 277.5,95.0 352.5,96.5 465.0,96.5 540.0,102.3' fill='none' stroke='#54A24B' stroke-width='2.4'/>
-<circle cx='90.0' cy='95.0' r='3.2' fill='#54A24B'/>
-<circle cx='165.0' cy='95.0' r='3.2' fill='#54A24B'/>
-<circle cx='277.5' cy='95.0' r='3.2' fill='#54A24B'/>
-<circle cx='352.5' cy='96.5' r='3.2' fill='#54A24B'/>
-<circle cx='465.0' cy='96.5' r='3.2' fill='#54A24B'/>
-<circle cx='540.0' cy='102.3' r='3.2' fill='#54A24B'/>
-<polyline points='90.0,95.0 165.0,95.0 277.5,95.7 352.5,97.9 465.0,106.0 540.0,103.8' fill='none' stroke='#B279A2' stroke-width='2.4'/>
-<circle cx='90.0' cy='95.0' r='3.2' fill='#B279A2'/>
-<circle cx='165.0' cy='95.0' r='3.2' fill='#B279A2'/>
-<circle cx='277.5' cy='95.7' r='3.2' fill='#B279A2'/>
-<circle cx='352.5' cy='97.9' r='3.2' fill='#B279A2'/>
-<circle cx='465.0' cy='106.0' r='3.2' fill='#B279A2'/>
-<circle cx='540.0' cy='103.8' r='3.2' fill='#B279A2'/>
-<line x1='270' y1='108' x2='288' y2='108' stroke='#4C78A8' stroke-width='3'/><text x='292' y='112' font-size='9' font-family='Arial, sans-serif'>Simple RNN</text>
-<line x1='338' y1='108' x2='356' y2='108' stroke='#F58518' stroke-width='3'/><text x='360' y='112' font-size='9' font-family='Arial, sans-serif'>BiRNN</text>
-<line x1='406' y1='108' x2='424' y2='108' stroke='#54A24B' stroke-width='3'/><text x='428' y='112' font-size='9' font-family='Arial, sans-serif'>LSTM</text>
-<line x1='474' y1='108' x2='492' y2='108' stroke='#B279A2' stroke-width='3'/><text x='496' y='112' font-size='9' font-family='Arial, sans-serif'>GRU</text>
-<text x='905.0' y='77' text-anchor='middle' font-size='14' font-weight='bold' font-family='Arial, sans-serif'>AABBA rhyme score</text><line x1='680' y1='95' x2='680' y2='315' stroke='#333'/><line x1='680' y1='315' x2='1130' y2='315' stroke='#333'/>
-<line x1='680' y1='315.0' x2='1130' y2='315.0' stroke='#ddd'/><text x='673' y='319.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.00</text>
-<line x1='680' y1='260.0' x2='1130' y2='260.0' stroke='#ddd'/><text x='673' y='264.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.12</text>
-<line x1='680' y1='205.0' x2='1130' y2='205.0' stroke='#ddd'/><text x='673' y='209.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.25</text>
-<line x1='680' y1='150.0' x2='1130' y2='150.0' stroke='#ddd'/><text x='673' y='154.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.38</text>
-<line x1='680' y1='95.0' x2='1130' y2='95.0' stroke='#ddd'/><text x='673' y='99.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.50</text>
-<text x='680.0' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.3</text>
-<text x='867.5' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.8</text>
-<text x='1055.0' y='331' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>1.3</text>
-<text x='905.0' y='349' text-anchor='middle' font-size='10' font-family='Arial, sans-serif'>Temperature</text><text x='639' y='205.0' text-anchor='middle' transform='rotate(-90 639 205.0)' font-size='10' font-family='Arial, sans-serif'>Mean score</text>
-<polyline points='680.0,301.4 755.0,308.4 867.5,307.4 942.5,308.8 1055.0,311.6 1130.0,312.3' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
-<circle cx='680.0' cy='301.4' r='3.2' fill='#4C78A8'/>
-<circle cx='755.0' cy='308.4' r='3.2' fill='#4C78A8'/>
-<circle cx='867.5' cy='307.4' r='3.2' fill='#4C78A8'/>
-<circle cx='942.5' cy='308.8' r='3.2' fill='#4C78A8'/>
-<circle cx='1055.0' cy='311.6' r='3.2' fill='#4C78A8'/>
-<circle cx='1130.0' cy='312.3' r='3.2' fill='#4C78A8'/>
-<polyline points='680.0,303.2 755.0,306.0 867.5,305.0 942.5,311.3 1055.0,312.0 1130.0,312.2' fill='none' stroke='#F58518' stroke-width='2.4'/>
-<circle cx='680.0' cy='303.2' r='3.2' fill='#F58518'/>
-<circle cx='755.0' cy='306.0' r='3.2' fill='#F58518'/>
-<circle cx='867.5' cy='305.0' r='3.2' fill='#F58518'/>
-<circle cx='942.5' cy='311.3' r='3.2' fill='#F58518'/>
-<circle cx='1055.0' cy='312.0' r='3.2' fill='#F58518'/>
-<circle cx='1130.0' cy='312.2' r='3.2' fill='#F58518'/>
-<polyline points='680.0,299.2 755.0,302.4 867.5,310.2 942.5,311.7 1055.0,312.4 1130.0,312.2' fill='none' stroke='#54A24B' stroke-width='2.4'/>
-<circle cx='680.0' cy='299.2' r='3.2' fill='#54A24B'/>
-<circle cx='755.0' cy='302.4' r='3.2' fill='#54A24B'/>
-<circle cx='867.5' cy='310.2' r='3.2' fill='#54A24B'/>
-<circle cx='942.5' cy='311.7' r='3.2' fill='#54A24B'/>
-<circle cx='1055.0' cy='312.4' r='3.2' fill='#54A24B'/>
-<circle cx='1130.0' cy='312.2' r='3.2' fill='#54A24B'/>
-<polyline points='680.0,109.7 755.0,133.3 867.5,218.0 942.5,262.4 1055.0,291.3 1130.0,301.6' fill='none' stroke='#B279A2' stroke-width='2.4'/>
-<circle cx='680.0' cy='109.7' r='3.2' fill='#B279A2'/>
-<circle cx='755.0' cy='133.3' r='3.2' fill='#B279A2'/>
-<circle cx='867.5' cy='218.0' r='3.2' fill='#B279A2'/>
-<circle cx='942.5' cy='262.4' r='3.2' fill='#B279A2'/>
-<circle cx='1055.0' cy='291.3' r='3.2' fill='#B279A2'/>
-<circle cx='1130.0' cy='301.6' r='3.2' fill='#B279A2'/>
-<text x='315.0' y='427' text-anchor='middle' font-size='14' font-weight='bold' font-family='Arial, sans-serif'>Distinct-2</text><line x1='90' y1='445' x2='90' y2='665' stroke='#333'/><line x1='90' y1='665' x2='540' y2='665' stroke='#333'/>
-<line x1='90' y1='665.0' x2='540' y2='665.0' stroke='#ddd'/><text x='83' y='669.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.00</text>
-<line x1='90' y1='610.0' x2='540' y2='610.0' stroke='#ddd'/><text x='83' y='614.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.25</text>
-<line x1='90' y1='555.0' x2='540' y2='555.0' stroke='#ddd'/><text x='83' y='559.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.50</text>
-<line x1='90' y1='500.0' x2='540' y2='500.0' stroke='#ddd'/><text x='83' y='504.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.75</text>
-<line x1='90' y1='445.0' x2='540' y2='445.0' stroke='#ddd'/><text x='83' y='449.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>1.00</text>
-<text x='90.0' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.3</text>
-<text x='277.5' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.8</text>
-<text x='465.0' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>1.3</text>
-<text x='315.0' y='699' text-anchor='middle' font-size='10' font-family='Arial, sans-serif'>Temperature</text><text x='49' y='555.0' text-anchor='middle' transform='rotate(-90 49 555.0)' font-size='10' font-family='Arial, sans-serif'>Unique bigrams / bigrams</text>
-<polyline points='90.0,618.3 165.0,576.3 277.5,523.8 352.5,495.9 465.0,474.4 540.0,467.0' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
-<circle cx='90.0' cy='618.3' r='3.2' fill='#4C78A8'/>
-<circle cx='165.0' cy='576.3' r='3.2' fill='#4C78A8'/>
-<circle cx='277.5' cy='523.8' r='3.2' fill='#4C78A8'/>
-<circle cx='352.5' cy='495.9' r='3.2' fill='#4C78A8'/>
-<circle cx='465.0' cy='474.4' r='3.2' fill='#4C78A8'/>
-<circle cx='540.0' cy='467.0' r='3.2' fill='#4C78A8'/>
-<polyline points='90.0,610.5 165.0,569.8 277.5,520.6 352.5,496.0 465.0,473.2 540.0,466.4' fill='none' stroke='#F58518' stroke-width='2.4'/>
-<circle cx='90.0' cy='610.5' r='3.2' fill='#F58518'/>
-<circle cx='165.0' cy='569.8' r='3.2' fill='#F58518'/>
-<circle cx='277.5' cy='520.6' r='3.2' fill='#F58518'/>
-<circle cx='352.5' cy='496.0' r='3.2' fill='#F58518'/>
-<circle cx='465.0' cy='473.2' r='3.2' fill='#F58518'/>
-<circle cx='540.0' cy='466.4' r='3.2' fill='#F58518'/>
-<polyline points='90.0,612.8 165.0,571.2 277.5,520.0 352.5,496.2 465.0,476.5 540.0,470.6' fill='none' stroke='#54A24B' stroke-width='2.4'/>
-<circle cx='90.0' cy='612.8' r='3.2' fill='#54A24B'/>
-<circle cx='165.0' cy='571.2' r='3.2' fill='#54A24B'/>
-<circle cx='277.5' cy='520.0' r='3.2' fill='#54A24B'/>
-<circle cx='352.5' cy='496.2' r='3.2' fill='#54A24B'/>
-<circle cx='465.0' cy='476.5' r='3.2' fill='#54A24B'/>
-<circle cx='540.0' cy='470.6' r='3.2' fill='#54A24B'/>
-<polyline points='90.0,612.0 165.0,573.6 277.5,526.3 352.5,498.0 465.0,477.4 540.0,469.5' fill='none' stroke='#B279A2' stroke-width='2.4'/>
-<circle cx='90.0' cy='612.0' r='3.2' fill='#B279A2'/>
-<circle cx='165.0' cy='573.6' r='3.2' fill='#B279A2'/>
-<circle cx='277.5' cy='526.3' r='3.2' fill='#B279A2'/>
-<circle cx='352.5' cy='498.0' r='3.2' fill='#B279A2'/>
-<circle cx='465.0' cy='477.4' r='3.2' fill='#B279A2'/>
-<circle cx='540.0' cy='469.5' r='3.2' fill='#B279A2'/>
-<text x='905.0' y='427' text-anchor='middle' font-size='14' font-weight='bold' font-family='Arial, sans-serif'>Repeated trigram rate</text><line x1='680' y1='445' x2='680' y2='665' stroke='#333'/><line x1='680' y1='665' x2='1130' y2='665' stroke='#333'/>
-<line x1='680' y1='665.0' x2='1130' y2='665.0' stroke='#ddd'/><text x='673' y='669.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.00</text>
-<line x1='680' y1='610.0' x2='1130' y2='610.0' stroke='#ddd'/><text x='673' y='614.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.01</text>
-<line x1='680' y1='555.0' x2='1130' y2='555.0' stroke='#ddd'/><text x='673' y='559.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.02</text>
-<line x1='680' y1='500.0' x2='1130' y2='500.0' stroke='#ddd'/><text x='673' y='504.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.03</text>
-<line x1='680' y1='445.0' x2='1130' y2='445.0' stroke='#ddd'/><text x='673' y='449.0' text-anchor='end' font-size='9' font-family='Arial, sans-serif'>0.04</text>
-<text x='680.0' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.3</text>
-<text x='867.5' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>0.8</text>
-<text x='1055.0' y='681' text-anchor='middle' font-size='9' font-family='Arial, sans-serif'>1.3</text>
-<text x='905.0' y='699' text-anchor='middle' font-size='10' font-family='Arial, sans-serif'>Temperature</text><text x='639' y='555.0' text-anchor='middle' transform='rotate(-90 639 555.0)' font-size='10' font-family='Arial, sans-serif'>Rate</text>
-<polyline points='680.0,609.3 755.0,653.0 867.5,665.0 942.5,665.0 1055.0,665.0 1130.0,665.0' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
-<circle cx='680.0' cy='609.3' r='3.2' fill='#4C78A8'/>
-<circle cx='755.0' cy='653.0' r='3.2' fill='#4C78A8'/>
-<circle cx='867.5' cy='665.0' r='3.2' fill='#4C78A8'/>
-<circle cx='942.5' cy='665.0' r='3.2' fill='#4C78A8'/>
-<circle cx='1055.0' cy='665.0' r='3.2' fill='#4C78A8'/>
-<circle cx='1130.0' cy='665.0' r='3.2' fill='#4C78A8'/>
-<polyline points='680.0,559.7 755.0,648.1 867.5,664.5 942.5,664.4 1055.0,664.5 1130.0,665.0' fill='none' stroke='#F58518' stroke-width='2.4'/>
-<circle cx='680.0' cy='559.7' r='3.2' fill='#F58518'/>
-<circle cx='755.0' cy='648.1' r='3.2' fill='#F58518'/>
-<circle cx='867.5' cy='664.5' r='3.2' fill='#F58518'/>
-<circle cx='942.5' cy='664.4' r='3.2' fill='#F58518'/>
-<circle cx='1055.0' cy='664.5' r='3.2' fill='#F58518'/>
-<circle cx='1130.0' cy='665.0' r='3.2' fill='#F58518'/>
-<polyline points='680.0,575.0 755.0,651.1 867.5,665.0 942.5,665.0 1055.0,664.4 1130.0,665.0' fill='none' stroke='#54A24B' stroke-width='2.4'/>
-<circle cx='680.0' cy='575.0' r='3.2' fill='#54A24B'/>
-<circle cx='755.0' cy='651.1' r='3.2' fill='#54A24B'/>
-<circle cx='867.5' cy='665.0' r='3.2' fill='#54A24B'/>
-<circle cx='942.5' cy='665.0' r='3.2' fill='#54A24B'/>
-<circle cx='1055.0' cy='664.4' r='3.2' fill='#54A24B'/>
-<circle cx='1130.0' cy='665.0' r='3.2' fill='#54A24B'/>
-<polyline points='680.0,453.2 755.0,621.9 867.5,662.2 942.5,665.0 1055.0,665.0 1130.0,665.0' fill='none' stroke='#B279A2' stroke-width='2.4'/>
-<circle cx='680.0' cy='453.2' r='3.2' fill='#B279A2'/>
-<circle cx='755.0' cy='621.9' r='3.2' fill='#B279A2'/>
-<circle cx='867.5' cy='662.2' r='3.2' fill='#B279A2'/>
-<circle cx='942.5' cy='665.0' r='3.2' fill='#B279A2'/>
-<circle cx='1055.0' cy='665.0' r='3.2' fill='#B279A2'/>
-<circle cx='1130.0' cy='665.0' r='3.2' fill='#B279A2'/>
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='820' viewBox='0 0 1200 820' role='img'><title>Temperature effects on form and diversity</title><rect width='100%' height='100%' fill='white'/>
+<text x='600' y='32' text-anchor='middle' font-size='22' font-weight='bold' font-family='Arial, sans-serif'>Temperature effects on generated limericks</text>
+<line x1='330' y1='58' x2='356' y2='58' stroke='#4C78A8' stroke-width='4'/><text x='363' y='63' font-size='12' font-family='Arial, sans-serif'>Simple RNN</text>
+<line x1='475' y1='58' x2='501' y2='58' stroke='#F58518' stroke-width='4'/><text x='508' y='63' font-size='12' font-family='Arial, sans-serif'>BiRNN</text>
+<line x1='620' y1='58' x2='646' y2='58' stroke='#54A24B' stroke-width='4'/><text x='653' y='63' font-size='12' font-family='Arial, sans-serif'>LSTM</text>
+<line x1='765' y1='58' x2='791' y2='58' stroke='#B279A2' stroke-width='4'/><text x='798' y='63' font-size='12' font-family='Arial, sans-serif'>GRU</text>
+<text x='322.5' y='100' text-anchor='middle' font-size='16' font-weight='bold' font-family='Arial, sans-serif'>Five-line form</text><line x1='100' y1='120' x2='100' y2='340' stroke='#333'/><line x1='100' y1='340' x2='545' y2='340' stroke='#333'/>
+<line x1='100' y1='340.0' x2='545' y2='340.0' stroke='#ddd'/><text x='93' y='344.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.00</text>
+<line x1='100' y1='285.0' x2='545' y2='285.0' stroke='#ddd'/><text x='93' y='289.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.25</text>
+<line x1='100' y1='230.0' x2='545' y2='230.0' stroke='#ddd'/><text x='93' y='234.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.50</text>
+<line x1='100' y1='175.0' x2='545' y2='175.0' stroke='#ddd'/><text x='93' y='179.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.75</text>
+<line x1='100' y1='120.0' x2='545' y2='120.0' stroke='#ddd'/><text x='93' y='124.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>1.00</text>
+<text x='100.0' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.3</text>
+<text x='285.4' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.8</text>
+<text x='470.8' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>1.3</text>
+<text x='322.5' y='378' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>Temperature</text><text x='54' y='230.0' text-anchor='middle' transform='rotate(-90 54 230.0)' font-size='12' font-family='Arial, sans-serif'>Share of poems</text>
+<polyline points='100.0,120.0 174.2,120.7 285.4,124.4 359.6,127.3 470.8,147.9 545.0,188.9' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
+<circle cx='100.0' cy='120.0' r='3.2' fill='#4C78A8'/>
+<circle cx='174.2' cy='120.7' r='3.2' fill='#4C78A8'/>
+<circle cx='285.4' cy='124.4' r='3.2' fill='#4C78A8'/>
+<circle cx='359.6' cy='127.3' r='3.2' fill='#4C78A8'/>
+<circle cx='470.8' cy='147.9' r='3.2' fill='#4C78A8'/>
+<circle cx='545.0' cy='188.9' r='3.2' fill='#4C78A8'/>
+<polyline points='100.0,147.9 174.2,142.0 285.4,136.1 359.6,138.3 470.8,173.5 545.0,216.1' fill='none' stroke='#F58518' stroke-width='2.4'/>
+<circle cx='100.0' cy='147.9' r='3.2' fill='#F58518'/>
+<circle cx='174.2' cy='142.0' r='3.2' fill='#F58518'/>
+<circle cx='285.4' cy='136.1' r='3.2' fill='#F58518'/>
+<circle cx='359.6' cy='138.3' r='3.2' fill='#F58518'/>
+<circle cx='470.8' cy='173.5' r='3.2' fill='#F58518'/>
+<circle cx='545.0' cy='216.1' r='3.2' fill='#F58518'/>
+<polyline points='100.0,120.0 174.2,120.0 285.4,120.0 359.6,121.5 470.8,121.5 545.0,127.3' fill='none' stroke='#54A24B' stroke-width='2.4'/>
+<circle cx='100.0' cy='120.0' r='3.2' fill='#54A24B'/>
+<circle cx='174.2' cy='120.0' r='3.2' fill='#54A24B'/>
+<circle cx='285.4' cy='120.0' r='3.2' fill='#54A24B'/>
+<circle cx='359.6' cy='121.5' r='3.2' fill='#54A24B'/>
+<circle cx='470.8' cy='121.5' r='3.2' fill='#54A24B'/>
+<circle cx='545.0' cy='127.3' r='3.2' fill='#54A24B'/>
+<polyline points='100.0,120.0 174.2,120.0 285.4,120.7 359.6,122.9 470.8,131.0 545.0,128.8' fill='none' stroke='#B279A2' stroke-width='2.4'/>
+<circle cx='100.0' cy='120.0' r='3.2' fill='#B279A2'/>
+<circle cx='174.2' cy='120.0' r='3.2' fill='#B279A2'/>
+<circle cx='285.4' cy='120.7' r='3.2' fill='#B279A2'/>
+<circle cx='359.6' cy='122.9' r='3.2' fill='#B279A2'/>
+<circle cx='470.8' cy='131.0' r='3.2' fill='#B279A2'/>
+<circle cx='545.0' cy='128.8' r='3.2' fill='#B279A2'/>
+<text x='912.5' y='100' text-anchor='middle' font-size='16' font-weight='bold' font-family='Arial, sans-serif'>AABBA rhyme score</text><line x1='690' y1='120' x2='690' y2='340' stroke='#333'/><line x1='690' y1='340' x2='1135' y2='340' stroke='#333'/>
+<line x1='690' y1='340.0' x2='1135' y2='340.0' stroke='#ddd'/><text x='683' y='344.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.00</text>
+<line x1='690' y1='285.0' x2='1135' y2='285.0' stroke='#ddd'/><text x='683' y='289.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.12</text>
+<line x1='690' y1='230.0' x2='1135' y2='230.0' stroke='#ddd'/><text x='683' y='234.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.25</text>
+<line x1='690' y1='175.0' x2='1135' y2='175.0' stroke='#ddd'/><text x='683' y='179.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.38</text>
+<line x1='690' y1='120.0' x2='1135' y2='120.0' stroke='#ddd'/><text x='683' y='124.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.50</text>
+<text x='690.0' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.3</text>
+<text x='875.4' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.8</text>
+<text x='1060.8' y='358' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>1.3</text>
+<text x='912.5' y='378' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>Temperature</text><text x='644' y='230.0' text-anchor='middle' transform='rotate(-90 644 230.0)' font-size='12' font-family='Arial, sans-serif'>Mean score</text>
+<polyline points='690.0,333.4 764.2,336.0 875.4,333.0 949.6,334.9 1060.8,337.1 1135.0,338.2' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
+<circle cx='690.0' cy='333.4' r='3.2' fill='#4C78A8'/>
+<circle cx='764.2' cy='336.0' r='3.2' fill='#4C78A8'/>
+<circle cx='875.4' cy='333.0' r='3.2' fill='#4C78A8'/>
+<circle cx='949.6' cy='334.9' r='3.2' fill='#4C78A8'/>
+<circle cx='1060.8' cy='337.1' r='3.2' fill='#4C78A8'/>
+<circle cx='1135.0' cy='338.2' r='3.2' fill='#4C78A8'/>
+<polyline points='690.0,334.1 764.2,334.5 875.4,332.3 949.6,336.0 1060.8,337.8 1135.0,338.9' fill='none' stroke='#F58518' stroke-width='2.4'/>
+<circle cx='690.0' cy='334.1' r='3.2' fill='#F58518'/>
+<circle cx='764.2' cy='334.5' r='3.2' fill='#F58518'/>
+<circle cx='875.4' cy='332.3' r='3.2' fill='#F58518'/>
+<circle cx='949.6' cy='336.0' r='3.2' fill='#F58518'/>
+<circle cx='1060.8' cy='337.8' r='3.2' fill='#F58518'/>
+<circle cx='1135.0' cy='338.9' r='3.2' fill='#F58518'/>
+<polyline points='690.0,328.6 764.2,330.1 875.4,336.7 949.6,337.4 1060.8,338.2 1135.0,337.4' fill='none' stroke='#54A24B' stroke-width='2.4'/>
+<circle cx='690.0' cy='328.6' r='3.2' fill='#54A24B'/>
+<circle cx='764.2' cy='330.1' r='3.2' fill='#54A24B'/>
+<circle cx='875.4' cy='336.7' r='3.2' fill='#54A24B'/>
+<circle cx='949.6' cy='337.4' r='3.2' fill='#54A24B'/>
+<circle cx='1060.8' cy='338.2' r='3.2' fill='#54A24B'/>
+<circle cx='1135.0' cy='337.4' r='3.2' fill='#54A24B'/>
+<polyline points='690.0,189.3 764.2,191.9 875.4,257.9 949.6,293.1 1060.8,322.8 1135.0,327.5' fill='none' stroke='#B279A2' stroke-width='2.4'/>
+<circle cx='690.0' cy='189.3' r='3.2' fill='#B279A2'/>
+<circle cx='764.2' cy='191.9' r='3.2' fill='#B279A2'/>
+<circle cx='875.4' cy='257.9' r='3.2' fill='#B279A2'/>
+<circle cx='949.6' cy='293.1' r='3.2' fill='#B279A2'/>
+<circle cx='1060.8' cy='322.8' r='3.2' fill='#B279A2'/>
+<circle cx='1135.0' cy='327.5' r='3.2' fill='#B279A2'/>
+<text x='322.5' y='450' text-anchor='middle' font-size='16' font-weight='bold' font-family='Arial, sans-serif'>Distinct-2</text><line x1='100' y1='470' x2='100' y2='690' stroke='#333'/><line x1='100' y1='690' x2='545' y2='690' stroke='#333'/>
+<line x1='100' y1='690.0' x2='545' y2='690.0' stroke='#ddd'/><text x='93' y='694.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.00</text>
+<line x1='100' y1='635.0' x2='545' y2='635.0' stroke='#ddd'/><text x='93' y='639.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.25</text>
+<line x1='100' y1='580.0' x2='545' y2='580.0' stroke='#ddd'/><text x='93' y='584.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.50</text>
+<line x1='100' y1='525.0' x2='545' y2='525.0' stroke='#ddd'/><text x='93' y='529.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.75</text>
+<line x1='100' y1='470.0' x2='545' y2='470.0' stroke='#ddd'/><text x='93' y='474.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>1.00</text>
+<text x='100.0' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.3</text>
+<text x='285.4' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.8</text>
+<text x='470.8' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>1.3</text>
+<text x='322.5' y='728' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>Temperature</text><text x='54' y='580.0' text-anchor='middle' transform='rotate(-90 54 580.0)' font-size='12' font-family='Arial, sans-serif'>Unique bigrams / bigrams</text>
+<polyline points='100.0,643.3 174.2,601.3 285.4,548.8 359.6,520.9 470.8,499.4 545.0,492.0' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
+<circle cx='100.0' cy='643.3' r='3.2' fill='#4C78A8'/>
+<circle cx='174.2' cy='601.3' r='3.2' fill='#4C78A8'/>
+<circle cx='285.4' cy='548.8' r='3.2' fill='#4C78A8'/>
+<circle cx='359.6' cy='520.9' r='3.2' fill='#4C78A8'/>
+<circle cx='470.8' cy='499.4' r='3.2' fill='#4C78A8'/>
+<circle cx='545.0' cy='492.0' r='3.2' fill='#4C78A8'/>
+<polyline points='100.0,635.5 174.2,594.8 285.4,545.6 359.6,521.0 470.8,498.2 545.0,491.4' fill='none' stroke='#F58518' stroke-width='2.4'/>
+<circle cx='100.0' cy='635.5' r='3.2' fill='#F58518'/>
+<circle cx='174.2' cy='594.8' r='3.2' fill='#F58518'/>
+<circle cx='285.4' cy='545.6' r='3.2' fill='#F58518'/>
+<circle cx='359.6' cy='521.0' r='3.2' fill='#F58518'/>
+<circle cx='470.8' cy='498.2' r='3.2' fill='#F58518'/>
+<circle cx='545.0' cy='491.4' r='3.2' fill='#F58518'/>
+<polyline points='100.0,637.8 174.2,596.2 285.4,545.0 359.6,521.2 470.8,501.5 545.0,495.6' fill='none' stroke='#54A24B' stroke-width='2.4'/>
+<circle cx='100.0' cy='637.8' r='3.2' fill='#54A24B'/>
+<circle cx='174.2' cy='596.2' r='3.2' fill='#54A24B'/>
+<circle cx='285.4' cy='545.0' r='3.2' fill='#54A24B'/>
+<circle cx='359.6' cy='521.2' r='3.2' fill='#54A24B'/>
+<circle cx='470.8' cy='501.5' r='3.2' fill='#54A24B'/>
+<circle cx='545.0' cy='495.6' r='3.2' fill='#54A24B'/>
+<polyline points='100.0,637.0 174.2,598.6 285.4,551.3 359.6,523.0 470.8,502.4 545.0,494.5' fill='none' stroke='#B279A2' stroke-width='2.4'/>
+<circle cx='100.0' cy='637.0' r='3.2' fill='#B279A2'/>
+<circle cx='174.2' cy='598.6' r='3.2' fill='#B279A2'/>
+<circle cx='285.4' cy='551.3' r='3.2' fill='#B279A2'/>
+<circle cx='359.6' cy='523.0' r='3.2' fill='#B279A2'/>
+<circle cx='470.8' cy='502.4' r='3.2' fill='#B279A2'/>
+<circle cx='545.0' cy='494.5' r='3.2' fill='#B279A2'/>
+<text x='912.5' y='450' text-anchor='middle' font-size='16' font-weight='bold' font-family='Arial, sans-serif'>Repeated trigram rate</text><line x1='690' y1='470' x2='690' y2='690' stroke='#333'/><line x1='690' y1='690' x2='1135' y2='690' stroke='#333'/>
+<line x1='690' y1='690.0' x2='1135' y2='690.0' stroke='#ddd'/><text x='683' y='694.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.00</text>
+<line x1='690' y1='635.0' x2='1135' y2='635.0' stroke='#ddd'/><text x='683' y='639.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.01</text>
+<line x1='690' y1='580.0' x2='1135' y2='580.0' stroke='#ddd'/><text x='683' y='584.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.02</text>
+<line x1='690' y1='525.0' x2='1135' y2='525.0' stroke='#ddd'/><text x='683' y='529.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.03</text>
+<line x1='690' y1='470.0' x2='1135' y2='470.0' stroke='#ddd'/><text x='683' y='474.0' text-anchor='end' font-size='11' font-family='Arial, sans-serif'>0.04</text>
+<text x='690.0' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.3</text>
+<text x='875.4' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>0.8</text>
+<text x='1060.8' y='708' text-anchor='middle' font-size='11' font-family='Arial, sans-serif'>1.3</text>
+<text x='912.5' y='728' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>Temperature</text><text x='644' y='580.0' text-anchor='middle' transform='rotate(-90 644 580.0)' font-size='12' font-family='Arial, sans-serif'>Rate</text>
+<polyline points='690.0,634.3 764.2,678.0 875.4,690.0 949.6,690.0 1060.8,690.0 1135.0,690.0' fill='none' stroke='#4C78A8' stroke-width='2.4'/>
+<circle cx='690.0' cy='634.3' r='3.2' fill='#4C78A8'/>
+<circle cx='764.2' cy='678.0' r='3.2' fill='#4C78A8'/>
+<circle cx='875.4' cy='690.0' r='3.2' fill='#4C78A8'/>
+<circle cx='949.6' cy='690.0' r='3.2' fill='#4C78A8'/>
+<circle cx='1060.8' cy='690.0' r='3.2' fill='#4C78A8'/>
+<circle cx='1135.0' cy='690.0' r='3.2' fill='#4C78A8'/>
+<polyline points='690.0,584.7 764.2,673.1 875.4,689.5 949.6,689.4 1060.8,689.5 1135.0,690.0' fill='none' stroke='#F58518' stroke-width='2.4'/>
+<circle cx='690.0' cy='584.7' r='3.2' fill='#F58518'/>
+<circle cx='764.2' cy='673.1' r='3.2' fill='#F58518'/>
+<circle cx='875.4' cy='689.5' r='3.2' fill='#F58518'/>
+<circle cx='949.6' cy='689.4' r='3.2' fill='#F58518'/>
+<circle cx='1060.8' cy='689.5' r='3.2' fill='#F58518'/>
+<circle cx='1135.0' cy='690.0' r='3.2' fill='#F58518'/>
+<polyline points='690.0,600.0 764.2,676.1 875.4,690.0 949.6,690.0 1060.8,689.4 1135.0,690.0' fill='none' stroke='#54A24B' stroke-width='2.4'/>
+<circle cx='690.0' cy='600.0' r='3.2' fill='#54A24B'/>
+<circle cx='764.2' cy='676.1' r='3.2' fill='#54A24B'/>
+<circle cx='875.4' cy='690.0' r='3.2' fill='#54A24B'/>
+<circle cx='949.6' cy='690.0' r='3.2' fill='#54A24B'/>
+<circle cx='1060.8' cy='689.4' r='3.2' fill='#54A24B'/>
+<circle cx='1135.0' cy='690.0' r='3.2' fill='#54A24B'/>
+<polyline points='690.0,478.2 764.2,646.9 875.4,687.2 949.6,690.0 1060.8,690.0 1135.0,690.0' fill='none' stroke='#B279A2' stroke-width='2.4'/>
+<circle cx='690.0' cy='478.2' r='3.2' fill='#B279A2'/>
+<circle cx='764.2' cy='646.9' r='3.2' fill='#B279A2'/>
+<circle cx='875.4' cy='687.2' r='3.2' fill='#B279A2'/>
+<circle cx='949.6' cy='690.0' r='3.2' fill='#B279A2'/>
+<circle cx='1060.8' cy='690.0' r='3.2' fill='#B279A2'/>
+<circle cx='1135.0' cy='690.0' r='3.2' fill='#B279A2'/>
 </svg>

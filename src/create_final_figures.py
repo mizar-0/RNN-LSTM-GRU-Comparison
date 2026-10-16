@@ -42,10 +42,10 @@ def draw_axes(parts: list[str], x0: float, y0: float, x1: float, y1: float, low:
     parts.append(f"<line x1='{x0}' y1='{y0}' x2='{x0}' y2='{y1}' stroke='#333'/><line x1='{x0}' y1='{y1}' x2='{x1}' y2='{y1}' stroke='#333'/>")
     for value in ticks(low, high):
         y = pos(value, low, high, y1, y0)
-        parts.append(f"<line x1='{x0}' y1='{y:.1f}' x2='{x1}' y2='{y:.1f}' stroke='#d8d8d8'/><text x='{x0-7}' y='{y+4:.1f}' text-anchor='end' font-size='10' {FONT}>{value:.2f}</text>")
+        parts.append(f"<line x1='{x0}' y1='{y:.1f}' x2='{x1}' y2='{y:.1f}' stroke='#d8d8d8'/><text x='{x0-7}' y='{y+4:.1f}' text-anchor='end' font-size='12' {FONT}>{value:.2f}</text>")
     for epoch in sorted({1, max(1, epochs // 2), epochs}):
         x = x0 if epochs == 1 else x0 + (x1 - x0) * (epoch - 1) / (epochs - 1)
-        parts.append(f"<text x='{x:.1f}' y='{y1+16}' text-anchor='middle' font-size='10' {FONT}>{epoch}</text>")
+        parts.append(f"<text x='{x:.1f}' y='{y1+18}' text-anchor='middle' font-size='12' {FONT}>{epoch}</text>")
 
 
 def polyline(values: list[float], x0: float, x1: float, y0: float, y1: float, low: float, high: float) -> str:
@@ -53,25 +53,25 @@ def polyline(values: list[float], x0: float, x1: float, y0: float, y1: float, lo
 
 
 def make_learning_curves(runs: list[dict], output_dir: Path) -> None:
-    parts = start_svg(1200, 800, "Training and validation convergence")
-    parts.append(f"<text x='600' y='32' text-anchor='middle' font-size='20' font-weight='bold' {FONT}>Training and validation convergence (context window = 64)</text>")
+    parts = start_svg(1200, 900, "Training and validation convergence")
+    parts.append(f"<text x='600' y='32' text-anchor='middle' font-size='22' font-weight='bold' {FONT}>Training and validation convergence (context window = 64)</text>")
+    parts.append(f"<line x1='455' y1='62' x2='490' y2='62' stroke='#333' stroke-width='3'/><text x='500' y='67' font-size='13' {FONT}>Training</text><line x1='610' y1='62' x2='645' y2='62' stroke='#333' stroke-width='3' stroke-dasharray='7 5'/><text x='655' y='67' font-size='13' {FONT}>Validation</text>")
     for index, run in enumerate(runs):
         col, row = index % 2, index // 2
-        ox, oy = 55 + col * 575, 65 + row * 355
+        ox, oy = 55 + col * 575, 85 + row * 395
         x0, x1, y0, y1 = ox + 58, ox + 530, oy + 38, oy + 285
         train = [float(item["train_loss"]) for item in run["history"]]
         validation = [float(item["validation_loss"]) for item in run["history"]]
         low, high = min(train + validation), max(train + validation)
         pad = max(0.02, (high - low) * .10)
         low, high = low - pad, high + pad
-        parts.append(f"<text x='{ox+294}' y='{oy+15}' text-anchor='middle' font-size='15' font-weight='bold' {FONT}>{run['label']} ({len(train)} epochs)</text>")
+        parts.append(f"<text x='{ox+294}' y='{oy+15}' text-anchor='middle' font-size='17' font-weight='bold' {FONT}>{run['label']} ({len(train)} epochs)</text>")
         draw_axes(parts, x0, y0, x1, y1, low, high, len(train))
         parts.append(f"<polyline points='{polyline(train,x0,x1,y0,y1,low,high)}' fill='none' stroke='{run['color']}' stroke-width='2.5'/><polyline points='{polyline(validation,x0,x1,y0,y1,low,high)}' fill='none' stroke='{run['color']}' stroke-width='2.5' stroke-dasharray='7 5'/>")
         best = min(range(len(validation)), key=validation.__getitem__)
         bx = x0 if len(validation) == 1 else x0 + (x1-x0) * best / (len(validation)-1)
         by = pos(validation[best], low, high, y1, y0)
-        parts.append(f"<circle cx='{bx:.1f}' cy='{by:.1f}' r='4' fill='black'/><text x='{x0}' y='{y0-9}' font-size='10' {FONT}>Loss</text><text x='{(x0+x1)/2}' y='{y1+34}' text-anchor='middle' font-size='10' {FONT}>Epoch</text>")
-        parts.append(f"<line x1='{x1-158}' y1='{y0+12}' x2='{x1-135}' y2='{y0+12}' stroke='{run['color']}' stroke-width='2.5'/><text x='{x1-130}' y='{y0+16}' font-size='10' {FONT}>Training</text><line x1='{x1-80}' y1='{y0+12}' x2='{x1-57}' y2='{y0+12}' stroke='{run['color']}' stroke-width='2.5' stroke-dasharray='7 5'/><text x='{x1-52}' y='{y0+16}' font-size='10' {FONT}>Validation</text>")
+        parts.append(f"<circle cx='{bx:.1f}' cy='{by:.1f}' r='4' fill='black'/><text x='{x0}' y='{y0-9}' font-size='12' {FONT}>Loss</text><text x='{(x0+x1)/2}' y='{y1+38}' text-anchor='middle' font-size='12' {FONT}>Epoch</text>")
     finish_svg(parts, output_dir / "learning_curves.svg")
 
 
