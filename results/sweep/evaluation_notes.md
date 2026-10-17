@@ -1,3 +1,5 @@
 # Sweep evaluation
 
 Strict AABBA rhyme score is the mean of four required pair checks: lines 1-2, 3-4, 1-5, and 2-5. A pair scores one only when both line-ending words are distinct, both are covered by the CMU Pronouncing Dictionary, and CMUdict lists them as rhymes. Identical end words, uncovered pairs, and missing five-line structure score zero. Rhyme coverage is the share of the four required pairs that contain distinct, dictionary-covered end words. Unterminated poems are retained and count as failures for termination and five-line form. Bootstrap intervals are 95% percentile intervals with 2,000 resamples.
+
+Distinct-2 is the number of unique lexical bigrams divided by the number of lexical bigrams pooled within a model-temperature cell. Beginning-of-sequence, end-of-line, end-of-sequence, padding, unknown, and punctuation tokens are excluded. Repeated-trigram rate is computed within each poem as the number of trigram occurrences beyond the first occurrence of each lexical trigram divided by the number of lexical trigrams, then averaged across the cell.

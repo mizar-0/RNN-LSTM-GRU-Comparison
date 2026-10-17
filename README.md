@@ -40,7 +40,24 @@ The generation sweep contains 7,200 poems: 4 models x 6 temperatures (0.3, 0.5, 
 
 Strict AABBA rhyme is the mean of four pair checks: lines 1-2, 3-4, 1-5, and 2-5. A pair scores one only when both end words are distinct, both are covered by CMUdict, and CMUdict lists them as rhymes. Identical endings, uncovered pairs, and malformed five-line outputs score zero. Under this definition, GRU scores 34.25% at temperature 0.3 and 33.67% at 0.5; the held-out human reference scores 94.25%, with 94.33% eligible-pair coverage.
 
-The selection rule prioritises held-out prediction quality first, then balances rhyme, diversity, and repetition within the chosen model. GRU at 0.5 is preferable to 0.3 because strict rhyme falls by only 0.58 percentage points, while repeated trigrams fall from 3.85% to 0.78% and distinct-2 rises from 0.241 to 0.415. GRU and LSTM both produced five lines for every sample at 0.3, so five-line completion does not distinguish them. Across all models, distinct-2 rises from roughly 0.21-0.25 at temperature 0.3 to 0.88-0.90 at 1.5, while rhyme and form generally weaken.
+Distinct-2 is the number of unique lexical bigrams divided by all lexical bigrams pooled within a model-temperature cell. Control tokens (`<bos>`, `<eol>`, `<eos>`, `<pad>`, and `<unk>`) and punctuation are excluded. Repeated-trigram rate is computed within each poem as excess occurrences of repeated lexical trigrams divided by all lexical trigrams, then averaged across the 300 poems. End-of-line tokens are therefore excluded from both metrics.
+
+GRU is selected on two converging grounds: it has the best held-out next-word prediction, and it is the only architecture with substantial strict rhyme in the generation sweep. Temperature is then selected within GRU by balancing rhyme, diversity, and repetition. GRU at 0.5 is preferable to 0.3 because strict rhyme falls by only 0.58 percentage points, while repeated trigrams fall from 3.85% to 0.78% and distinct-2 rises from 0.241 to 0.415. GRU and LSTM both produced five lines for every sample at 0.3, so five-line completion does not distinguish them. Across all models, distinct-2 rises from roughly 0.21-0.25 at temperature 0.3 to 0.88-0.90 at 1.5, while rhyme and form generally weaken.
+
+| Model | Temperature | Five-line rate | Strict rhyme | Distinct-2 | Repeated trigrams |
+|---|---:|---:|---:|---:|---:|
+| Simple RNN | 0.3 | 100.0% | 1.50% | 0.212 | 1.01% |
+| Simple RNN | 0.5 | 99.7% | 0.92% | 0.403 | 0.22% |
+| Simple RNN | 1.0 | 96.7% | 1.17% | 0.769 | 0.00% |
+| BiRNN | 0.3 | 87.3% | 1.33% | 0.248 | 1.91% |
+| BiRNN | 0.5 | 90.0% | 1.25% | 0.433 | 0.31% |
+| BiRNN | 1.0 | 91.7% | 0.92% | 0.768 | 0.01% |
+| LSTM | 0.3 | 100.0% | 2.58% | 0.237 | 1.64% |
+| LSTM | 0.5 | 100.0% | 2.25% | 0.426 | 0.25% |
+| LSTM | 1.0 | 99.3% | 0.58% | 0.767 | 0.00% |
+| GRU | 0.3 | 100.0% | 34.25% | 0.241 | 3.85% |
+| GRU | 0.5 | 100.0% | 33.67% | 0.415 | 0.78% |
+| GRU | 1.0 | 98.7% | 10.67% | 0.759 | 0.00% |
 
 ![Temperature effects](results/sweep/temperature_effects.svg)
 
@@ -48,13 +65,15 @@ The selection rule prioritises held-out prediction quality first, then balances 
 
 ## Blinded LLM judge scoring
 
-An 80-poem blinded sample (4 models x 4 temperatures x 5 poems) was scored by Claude as an LLM judge on 1-5 coherence and contextual consistency without access to model or temperature labels. GRU at temperature 0.3 had the highest combined LLM-judge score (3.0/5, 95% bootstrap CI 2.6-3.4), tied in point estimate with LSTM at temperature 0.3. GRU at 0.5 scored 2.7/5. No independent human rating was collected, so these scores are supplementary rather than definitive evidence.
+An 80-poem blinded sample (4 models x 4 temperatures x 5 poems) was scored by Claude as an LLM judge on 1-5 coherence and contextual consistency without model or temperature labels in the scoring sheet. At temperature 0.3, coherence/contextual-consistency scores were 2.6/2.0 for Simple RNN, 2.4/2.2 for BiRNN, 3.0/3.0 for LSTM, and 2.6/3.4 for GRU. At 0.5, they were 2.0/2.0, 2.4/2.4, 2.6/2.6, and 2.6/2.8 respectively. No independent human rating was collected. The judge had also previously seen some labelled examples from the same sweep, so recognition cannot be ruled out and the blinding was incomplete. These scores are supplementary rather than definitive evidence.
 
 ![Manual scores](results/sweep/manual_score_results.svg)
 
 ## Generated examples
 
 The report compares the same prompt and sample index across all four models at temperatures 0.3, 0.5, and 1.0. Additional fixed-seed showcase outputs are available for the [Simple RNN](results/final_context64_rnn/generated_samples.md), [BiRNN](results/final_context64_birnn/generated_samples.md), [LSTM](results/final_context64_lstm/generated_samples.md), and [GRU](results/final_context64_gru/generated_samples.md). The complete 7,200-poem sweep is stored in `results/sweep/sweep.jsonl`.
+
+The models were trained from scratch on about 66,000 task-specific poems, without pretrained language knowledge or an explicit planning objective for rhyme, narrative setup, and punchline. The next-token objective can learn local phrasing and form, but the 10,000-token vocabulary maps about one tenth of lexical tokens to `<unk>`, removing many rare names and content words. These constraints help explain why the outputs are often locally fluent but weak as complete limericks.
 
 ## Reproduction
 
@@ -89,7 +108,7 @@ Checkpoints and the raw dataset are intentionally excluded from version control 
 - Models trained for different numbers of epochs because of validation-based early stopping.
 - GRU still improved at the maximum epoch cap.
 - The strict rhyme metric depends on CMU Pronouncing Dictionary coverage and treats uncovered or identical end-word pairs as failures.
-- Manual scoring used one Claude LLM judge and five poems per cell; no independent human agreement check was collected.
+- Manual scoring used one Claude LLM judge and five poems per cell; no independent human agreement check was collected, and prior exposure to labelled samples made the blinding incomplete.
 - Perplexity measures next-token prediction rather than complete poetic quality.
 
 ## Repository contents
