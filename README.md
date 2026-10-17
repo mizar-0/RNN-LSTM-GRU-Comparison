@@ -1,8 +1,10 @@
 # Word Level Limerick Generation with RNN LSTM and GRU
 
-## Objective
+## Problem statement and objective
 
-This project implements and compares four word-level autoregressive language models for the ICT4403 Foundations of Generative AI Assignment 2: a Simple RNN, a Bidirectional RNN, an LSTM, and a GRU. Each model predicts the next token from a 64-token context and then generates limerick-like text sequentially from shared seed prompts.
+The assignment requires a word-level autoregressive text-generation system that implements Simple RNN, Bidirectional RNN, LSTM, and GRU models under comparable experimental conditions. The models must be evaluated for next-word prediction and generated-text quality, and the effect of at least three sampling temperatures must be analysed using the same seed sequences.
+
+This project applies that comparison to limerick generation. Each model predicts the next token from a 64-token context and generates text sequentially from shared seed prompts. The objective is to compare predictive performance, training cost, coherence, contextual consistency, diversity, repetition, five-line form, and rhyme, then identify the most effective model and sampling temperature for this dataset.
 
 The final recommendation is **GRU at temperature 0.5**. GRU achieved the best held-out prediction metrics. Temperature 0.5 retained nearly all of its strict rhyme performance at 0.3 while sharply reducing repeated trigrams and increasing distinct bigrams.
 
@@ -13,6 +15,13 @@ The experiments use the [Limerick Dataset (OEDILF v3)](https://doi.org/10.5281/z
 ## Models and common training protocol
 
 All models used the same full dataset split, seed (42), vocabulary cap (10,000), 128-dimensional embeddings, 256 hidden units, dropout 0.3, Adam learning rate 0.001, batch size 512, and a 64-token context window. Early stopping used validation loss with patience 5 and a maximum of 40 epochs. The best validation checkpoint was evaluated once on the held-out test set.
+
+- **Simple RNN:** a unidirectional recurrent baseline using its final hidden state for next-word prediction.
+- **Bidirectional RNN:** processes each input context in both directions and concatenates the final forward and backward states.
+- **LSTM:** uses input, output, and forget gates with a cell state to preserve longer-range information.
+- **GRU:** uses update and reset gates to control recurrent memory with fewer parameters than the LSTM configuration.
+
+All four recurrent representations feed a linear projection over the same 10,000-token output vocabulary.
 
 | Model | Parameters | Epochs | Test loss | Test perplexity | Top-1 | Top-5 | Seconds per epoch | Training time |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -77,6 +86,8 @@ The models were trained from scratch on about 66,000 task-specific poems, withou
 
 ## Reproduction
 
+The required packages are listed in [`requirements.txt`](requirements.txt): PyTorch, NumPy, pandas, Matplotlib, tqdm, and `pronouncing` for CMU-dictionary rhyme evaluation.
+
 1. Create a Python environment and install dependencies:
 
    ```powershell
@@ -110,6 +121,10 @@ Checkpoints and the raw dataset are intentionally excluded from version control 
 - The strict rhyme metric depends on CMU Pronouncing Dictionary coverage and treats uncovered or identical end-word pairs as failures.
 - Manual scoring used one Claude LLM judge and five poems per cell; no independent human agreement check was collected, and prior exposure to labelled samples made the blinding incomplete.
 - Perplexity measures next-token prediction rather than complete poetic quality.
+
+## Conclusion
+
+GRU is the best-performing architecture in this experiment because it achieved the lowest test loss and perplexity, the highest top-1 and top-5 accuracy, and substantially stronger strict rhyme than the other models. Temperature 0.5 is the recommended generation setting: compared with 0.3, it retained nearly all of the GRU's rhyme score while increasing distinct-2 and sharply reducing repeated trigrams. The generated poems still lack reliable narrative coherence and punchlines, so this conclusion is limited to the evaluated from-scratch models, dataset, seed, and metrics.
 
 ## Repository contents
 
