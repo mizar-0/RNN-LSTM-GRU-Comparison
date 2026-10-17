@@ -33,6 +33,16 @@ All four recurrent representations feed a linear projection over the same 10,000
 
 The GRU reached the 40-epoch cap while its validation loss was still improving. The Simple RNN, BiRNN, and LSTM stopped earlier under the shared early-stopping rule; this is a limitation when interpreting total training time and fixed-epoch comparisons.
 
+### Why the architectures behaved differently
+
+The results are consistent with the memory mechanisms of the four recurrent layers, although the experiment does not establish architecture as the sole cause. The Simple RNN repeatedly compresses the 64-token history into one tanh hidden state. Gradients and older information can decay across many recurrent steps, so it learned common local word transitions but was less effective at dependencies spanning several limerick lines. This is consistent with its relatively high perplexity and near-chance rhyme score.
+
+The BiRNN reads the same completed context window in both directions and concatenates two 256-unit states. It does not see the target word or any future generated text, so bidirectionality supplies a second ordering of the existing past rather than the future context that normally makes bidirectional networks useful. Its doubled recurrent representation increases the output projection and total parameter count substantially. The additional computation therefore produced almost the same perplexity as the Simple RNN, while the reverse state may place less emphasis on the most recent words that are especially important for autoregressive prediction. This also helps explain its weaker five-line completion.
+
+The LSTM's cell state and input, forget, and output gates provide a more stable path for information and gradients than a vanilla RNN. It consequently modelled the 64-token context more effectively and improved perplexity and the blinded coherence scores. However, an LSTM does not explicitly plan an AABBA rhyme scheme: average next-word loss is dominated by common tokens, whereas rhyming line endings are sparse decisions separated by many steps. Its better token prediction therefore did not translate into strong strict rhyme.
+
+The GRU uses reset and update gates to retain useful history while adapting its candidate state, but has no separate cell state and fewer parameters than the LSTM used here. That simpler gated path may have been easier to optimise on this dataset and may have retained line-position and earlier-ending cues strongly enough to reproduce rhyme patterns. The same tendency becomes overconfident at low temperature: GRU's strong rhyme at 0.3 coincides with its highest repeated-trigram rate and repeated endings such as *man*. Temperature 0.5 reduces this architectural-plus-decoding tendency without removing most of the learned rhyme. These explanations are hypotheses supported by the observed pattern; one seed, unequal stopping epochs, and GRU's continued improvement at epoch 40 prevent a clean causal attribution.
+
 ## Results and figures
 
 The training histories, test metrics, generated samples, and figures are committed under `results/`.
